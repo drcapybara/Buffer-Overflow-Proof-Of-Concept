@@ -7,14 +7,6 @@
  */
 
 int main(int argc, char *argv[]) {
-  pid_t child = fork();
-  
-  if (child) {
-    wait(NULL);
-    printf("child process terminated\n");
-  } else {
     execl("/usr/bin/tilix", "/THECHILD", NULL);
-  }
-  
   return 0;
 }
