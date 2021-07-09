@@ -1,0 +1,19 @@
+this command:
+
+    execl("/usr/bin/tilix", "/THECHILD", NULL);
+
+will spawn a shell when executed
+
+
+it is converted to the following hex:
+
+  43 bytes long 
+    65 78 65 63 6c 28 22 2f 75 73 72 2f 62 69 6e 2f 74 69 6c 69 78 22 2c 20 22 2f 54 48 45 43 48 49 4c 44 22 2c 20 4e 55 4c 4c 29 3b
+
+which is reversed here due to how it will be added to the stack:
+
+    3B 29 4C 4C 55 4E 20 2C 22 44 4C 49 48 43 45 48 54 2F 22 20 2C 22 78 69 6C 69 74 2F 6E 69 62 2F 72 73 75 2F 22 28 6C 63 65 78 65
+
+and is further modified to contain hex delimiters for use as a command line argument:
+
+    \x3b\x29\x4c\x4c\x55\x4e\x20\x2c\x22\x44\x4c\x49\x48\x43\x45\x48\x54\x2f\x22\x20\x2c\x22\x78\x69\x6c\x69\x74\x2f\x6e\x69\x62\x2f\x72\x73\x75\x2f\x22\x28\x6c\x63\x65\x78\x65
