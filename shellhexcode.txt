@@ -7,7 +7,7 @@ will spawn a shell when executed
 
 it is converted to the following hex:
 
-  43 bytes long 
+  43 bytes long
     65 78 65 63 6c 28 22 2f 75 73 72 2f 62 69 6e 2f 74 69 6c 69 78 22 2c 20 22 2f 54 48 45 43 48 49 4c 44 22 2c 20 4e 55 4c 4c 29 3b
 
 which is reversed here due to how it will be added to the stack:

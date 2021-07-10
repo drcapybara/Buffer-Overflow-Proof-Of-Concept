@@ -14,6 +14,6 @@
  */
 
 int main(int argc, char *argv[]) {
-    execl("/usr/bin/tilix", "/THECHILD", NULL); 
+    execve("/usr/bin/tilix", "/THECHILD", NULL); 
   return 0;
 }

@@ -8,11 +8,14 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+
+#include <sys/wait.h>
 
 void foo(const char* input, int num, int num2)
 {
 		
-    char buf[200];
+    char buf[10];
 	
 	printf("\naddress of buf is: %x\n", &buf);
 	printf("address of input is: %x\n\n", &input);
@@ -32,7 +35,9 @@ void foo(const char* input, int num, int num2)
 
 void bar(void)
 {
+    
     printf("Augh! I've been hacked!\n");
+    
 }
 
 int main(int argc, char* argv[])
@@ -42,6 +47,11 @@ int main(int argc, char* argv[])
     printf("Address of foo = %p\n", foo);
     printf("Address of bar = %p\n", bar);
 	
+    
+
+
+
+
     if (argc != 2) 
  {
         printf("Please supply a string as an argument!\n");
