@@ -6,7 +6,10 @@ The buffer overflow attack is demonstrated here in the following environment:
 
 Operating system: Debian 10
 IDE: Visual Studio Code
-Compilers used: GCC and CLANG
+Compilers used:
+GCC
+Borland c++
+CLANG
 
 In order for the exploit to work, there are a few modifications that need to be made
 to the system environment. There are built in protections to the operating system
@@ -22,7 +25,7 @@ The following code disables ASLR on a linux system:
   sudo bash -c 'echo 0 > /proc/sys/kernel/randomize_va_space'
 
 It is important to note that this change does not persist past a reboot of
-the machine.
+the machine. It was observed that this change was reset every hour or so automatically.
 
 The next step applies to the GCC compiler. The following flags are added as arguments
 to GCC and work to disable stack protections:
@@ -34,3 +37,5 @@ function in question.
 -fno-stack-protector : this flag turns off protection against stack smashing.
 This setting is turned off by default in GCC on many systems because it can cause
 conflicts with the C standard library.
+
+-z execstack : this flag allows elements of the stack to be executed as code.
