@@ -12,7 +12,7 @@
 void foo(const char* input, int num, int num2)
 {
 		
-    char buf[200];
+    char buf[10];
 	
 	printf("\naddress of buf is: %x\n", &buf);
 	printf("address of input is: %x\n\n", &input);

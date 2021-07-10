@@ -1,5 +1,0 @@
-x-special/nautilus-clipboard
-copy
-file:///home/dustinr/Documents/School%20Related/TCSS/TCSS%20360/tcss360-assignment1/minesweeper_input.txt
-
-at about 1:10
